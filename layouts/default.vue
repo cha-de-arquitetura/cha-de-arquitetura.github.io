@@ -1,24 +1,20 @@
 <template>
   <div class="container">
     <div class="header-container">
-      <div class="header">Menu</div>
+      <Header id="header" />
     </div>
     <div class="content-container">
-      <div class="left-side"></div>
-      <div class="content">
-        <Nuxt />
-      </div>
-      <div class="right-side"></div>
+      <Nuxt />
     </div>
     <div class="footer-container">
-      <div class="footer">
-        Footer
-      </div>
+      <Footer id="footer"/>
     </div>
   </div>
 </template>
 
-<style lang="scss">
+<style
+  lang="scss"
+  scoped>
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -28,35 +24,13 @@
   grid-row-gap: 8px;
 
   .header-container {
-    background-color: $primary;
     grid-column: 1 / 4;
     grid-row: 1;
-    display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
-    grid-template-rows: 60px;
-    grid-column-gap: 8px;
-
-    .header {
-      grid-column: 2;
-      grid-row: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: white;
-    }
   }
 
   .content-container {
     grid-column: 1 / 4;
     grid-row: 2;
-    display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 8px;
-
-    .content {
-      box-shadow: 4px 4px 10px -6px $darkest, -4px 4px 10px -6px $darkest;
-    }
   }
 
   .footer-container {
@@ -67,12 +41,9 @@
     grid-template-rows: 1fr;
     grid-column-gap: 8px;
 
-    .footer {
+    #footer {
       grid-column: 2;
       grid-row: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
   }
 }

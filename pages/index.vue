@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <ThreeColumnContent>
     <div>
       <nuxt-link to="/blog">Blog</nuxt-link>
     </div>
-  </div>
+  </ThreeColumnContent>
 </template>
 
 <script>
