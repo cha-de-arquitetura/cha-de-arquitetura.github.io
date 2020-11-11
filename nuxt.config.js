@@ -56,5 +56,14 @@ export default {
   },
   styleResources: {
     scss: './assets/scss/vars/*.scss'
+  },
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { minutes } = require('reading-time')(document.text);
+
+        document.readingTime = minutes;
+      }
+    }
   }
 }

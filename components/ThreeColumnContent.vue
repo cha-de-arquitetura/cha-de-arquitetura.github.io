@@ -24,9 +24,5 @@ export default {
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: 1fr;
   grid-column-gap: 8px;
-
-  .content {
-    box-shadow: 0 12px 10px -13px $darkest;
-  }
 }
 </style>

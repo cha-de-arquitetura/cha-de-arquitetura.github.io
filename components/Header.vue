@@ -1,10 +1,8 @@
 <template>
   <div class="header-container">
     <div class="header">
-      Logo
-      Articles
-      About
-      langs
+      <div>Logo</div>
+      <div>langs</div>
     </div>
   </div>
 </template>
@@ -19,7 +17,6 @@ export default {
   lang="scss"
   scoped>
 .header-container {
-  background-color: $primary;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: 60px;
@@ -29,9 +26,19 @@ export default {
     grid-column: 2;
     grid-row: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $darkest;
+    border-bottom: 1px solid lighten($darkest, 60%);
+  }
+
+  &.floating {
+    box-shadow: 0 9px 18px -8px $darkest;
+
+    .header {
+      border-bottom: 0;
+    }
   }
 }
 </style>
