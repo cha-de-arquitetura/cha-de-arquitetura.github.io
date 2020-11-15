@@ -13,9 +13,9 @@ module.exports = {
   ],
   plugins: [
   ],
-  // add your custom rules here
   rules: {
     'space-before-function-paren': 0,
-    semi: 0
+    semi: 0,
+    'arrow-parens': 0
   }
 }

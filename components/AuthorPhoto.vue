@@ -1,7 +1,7 @@
 <template>
   <img
     id="author-photo"
-    :src="require(`~/assets/photos/${author}`)"
+    :src="`/photos/${author}`"
     alt="Author photo" />
 </template>
 
@@ -12,6 +12,15 @@ export default {
     author: {
       type: String,
       default: 'placeholder.png'
+    },
+    normal: {
+      type: Boolean
+    },
+    small: {
+      type: Boolean
+    },
+    large: {
+      type: Boolean
     }
   }
 };
@@ -19,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 #author-photo {
-  width: 50px;
+  width: 40px;
   height: auto;
   border-radius: 40px;
 }

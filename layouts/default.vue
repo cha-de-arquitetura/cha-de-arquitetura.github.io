@@ -37,7 +37,7 @@
     grid-column: 1;
     grid-row: 3;
     display: grid;
-    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 8px;
 

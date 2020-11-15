@@ -1,0 +1,55 @@
+.nuxt-content {
+  *:not([class^="hljs"]) {
+    letter-spacing: -0.003em;
+    color: $darkest;
+    font-size: 21px;
+    font-weight: 300;
+  }
+
+  code:not(.hljs) {
+    background-color: lighten($darker, 60%);
+    color: darken($primary, 15%);
+    padding: 1px 4px;
+    font-family: 'Fira Code';
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: bold !important;
+  }
+
+  h1 {
+    font-size: 48px !important;
+  }
+
+  h2 {
+    font-size: 36px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+  }
+
+  h4 {
+    font-size: 21px !important;
+  }
+
+  h5 {
+    font-size: 18px !important;
+  }
+
+  .nuxt-content-highlight * {
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: 16px;
+
+    .hljs {
+      border-radius: 8px;
+    }
+  }
+}

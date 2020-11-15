@@ -4,5 +4,12 @@ module.exports = {
   ],
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
-  rules: {}
+  rules: {
+    'font-family-no-missing-generic-family-keyword': [
+      true,
+      {
+        ignoreFontFamilies: ['Roboto', 'Fira Code']
+      }
+    ]
+  }
 }

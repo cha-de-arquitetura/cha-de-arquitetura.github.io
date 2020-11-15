@@ -1,3 +1,4 @@
+// Roboto
 @font-face {
   font-family: Roboto;
   font-style: normal;
@@ -60,4 +61,13 @@
   font-weight: 700;
   font-display: swap;
   src: url('~assets/fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+}
+
+// Fira Code v5
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('~assets/fonts/Fira_Code_v5.2/woff2/FiraCode-VF.woff2') format('woff2-variations');
 }

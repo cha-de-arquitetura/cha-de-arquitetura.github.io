@@ -1,8 +1,8 @@
 <template>
   <div class="header-container">
     <div class="header">
-      <div>Logo</div>
-      <div>langs</div>
+      <Logo/>
+      <LocaleSwitcher/>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   scoped>
 .header-container {
   display: grid;
-  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 60px;
   grid-column-gap: 8px;
 

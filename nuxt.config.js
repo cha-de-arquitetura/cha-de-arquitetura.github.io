@@ -1,59 +1,43 @@
+import highlightjs from 'highlight.js';
+import { sitemapPt, sitemapEn } from './utils/sitemap';
+import { globalHead } from './utils/head';
+
 export default {
-  // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-
-  // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: 'T.issues',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
-
-  // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    './assets/scss/main.scss'
+    './assets/scss/main.scss',
+    'highlight.js/styles/androidstudio.css'
   ],
-
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
-
-  // Auto import components (https://go.nuxtjs.dev/config-components)
+  plugins: [
+    './plugins/v-stylish.js'
+  ],
   components: true,
-
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxtjs/style-resources'
   ],
-
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
-    // '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+    'nuxt-i18n'
   ],
-
-  // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
-
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
+  content: {
+    markdown: {
+      remarkPlugins: [
+        'remark-footnotes',
+        'remark-emoji',
+        '@fec/remark-a11y-emoji'
+      ],
+      highlighter(rawCode, lang) {
+        const highlightedCode = highlightjs.highlight(lang, rawCode).value;
+        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`
+      }
+    }
   },
+  build: {},
   styleResources: {
     scss: './assets/scss/vars/*.scss'
   },
@@ -63,7 +47,62 @@ export default {
         const { minutes } = require('reading-time')(document.text);
 
         document.readingTime = minutes;
+        document.url = `https://techissues.dev${document.path}`;
+
+        if (document.dir.endsWith('pt')) {
+          document.locale = 'pt_BR';
+        } else {
+          document.locale = 'en_US';
+        }
       }
     }
-  }
-}
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English'
+      },
+      {
+        code: 'pt',
+        iso: 'pt-BR',
+        file: 'pt-BR.js',
+        name: 'Português'
+      }
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    lazy: true,
+    langDir: 'locales/',
+    detectBrowserLanguage: {
+      alwaysRedirect: false,
+      fallbackLocale: 'en',
+      onlyOnRoot: true,
+      useCookie: false,
+      cookieDomain: 'techissues.dev',
+      cookieSecure: true
+    },
+    seo: true
+  },
+  robots: [
+    {
+      UserAgent: '*',
+      Disallow: [
+        '/_nuxt',
+        '/.github'
+      ]
+    },
+    {
+      Sitemap: 'https://techissues.dev/sitemap.xml'
+    }
+  ],
+  sitemap: {
+    path: '/sitemapindex.xml',
+    gzip: true,
+    hostname: 'https://techissues.dev',
+    sitemaps: [sitemapEn, sitemapPt]
+  },
+  head: globalHead
+};

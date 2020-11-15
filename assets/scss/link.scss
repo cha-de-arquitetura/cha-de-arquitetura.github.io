@@ -1,0 +1,11 @@
+.link {
+  color: $primary;
+  text-decoration: none;
+
+  &:visited,
+  &:hover,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,40 @@
+.no-margin {
+  margin: 0;
+}
+
+.horizontal-margin {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+.margin-left {
+  margin-left: $margin;
+}
+
+.margin-right {
+  margin-right: $margin;
+}
+
+.margin-top {
+  margin-top: $margin;
+}
+
+.margin-bottom {
+  margin-bottom: $margin;
+}
+
+.big-margin-left {
+  margin-left: $big-margin;
+}
+
+.big-margin-right {
+  margin-right: $big-margin;
+}
+
+.big-margin-top {
+  margin-top: $big-margin;
+}
+
+.big-margin-bottom {
+  margin-bottom: $big-margin;
+}
