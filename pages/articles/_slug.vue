@@ -27,7 +27,7 @@ import LinkedInButton from '@/components/button/LinkedInButton';
 import TwitterButton from '@/components/button/TwitterButton';
 import ThreeColumnContent from '@/components/ThreeColumnContent';
 import { ResolveContentLocale } from '~/utils/locale';
-import { ArticleMetaTags, globalHead } from '~/utils/head';
+import { ArticleMetaTags } from '~/utils/head';
 
 export default {
   name: 'BlogIndex',
@@ -53,7 +53,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.article.title} - ${globalHead.title}`,
+      title: this.article.title,
       meta: ArticleMetaTags(this.article)
     }
   }

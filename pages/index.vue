@@ -36,6 +36,9 @@ export default {
     return {
       articles
     }
+  },
+  head: {
+    title: null
   }
 };
 </script>

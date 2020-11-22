@@ -10,6 +10,12 @@ module.exports = {
       {
         ignoreFontFamilies: ['Roboto', 'Fira Code']
       }
+    ],
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind']
+      }
     ]
   }
 }
