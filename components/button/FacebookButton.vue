@@ -1,8 +1,7 @@
 <template>
   <button
-    id="facebook-button"
     type="button"
-    class="link-button social-button"
+    class="social-button"
     @click="share">
     <svg
       version="1.1"

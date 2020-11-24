@@ -8,13 +8,19 @@ module.exports = {
     'font-family-no-missing-generic-family-keyword': [
       true,
       {
-        ignoreFontFamilies: ['Roboto', 'Fira Code']
+        ignoreFontFamilies: ['Montserrat', 'Fira Code']
       }
     ],
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind']
+        ignoreAtRules: ['tailwind', 'layer', 'variant', 'screen']
+      }
+    ],
+    'at-rule-empty-line-before': [
+      'always',
+      {
+        ignore: ['after-comment', 'first-nested', 'inside-block', 'blockless-after-same-name-blockless', 'blockless-after-blockless']
       }
     ]
   }

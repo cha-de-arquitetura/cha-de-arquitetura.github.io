@@ -1,55 +1,57 @@
 .nuxt-content {
-  *:not([class^="hljs"]) {
-    letter-spacing: -0.003em;
-    color: $darkest;
-    font-size: 21px;
-    font-weight: 300;
-  }
-
-  code:not(.hljs) {
-    background-color: lighten($darker, 60%);
-    color: darken($primary, 15%);
-    padding: 1px 4px;
-    font-family: 'Fira Code';
-    font-size: 16px;
-    font-weight: 400;
-  }
-
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-weight: bold !important;
+    @apply font-medium tracking-tight mt-8 mb-2 #{!important};
   }
 
   h1 {
-    font-size: 48px !important;
+    @apply text-5xl #{!important};
   }
 
   h2 {
-    font-size: 36px !important;
+    @apply text-4xl #{!important};
   }
 
   h3 {
-    font-size: 24px !important;
+    @apply text-3xl #{!important};
   }
 
   h4 {
-    font-size: 21px !important;
+    @apply text-2xl #{!important};
   }
 
   h5 {
-    font-size: 18px !important;
+    @apply text-xl #{!important};
   }
 
-  .nuxt-content-highlight * {
-    font-family: 'Fira Code';
-    font-weight: 400;
-    font-size: 16px;
+  h6 {
+    @apply text-lg #{!important};
+  }
 
-    .hljs {
-      border-radius: 8px;
+  p,
+  li,
+  dt,
+  span:not([class*="hljs"]),
+  blockquote {
+    @apply text-gray-800 text-lg tracking-normal leading-8 font-normal;
+  }
+
+  code {
+    @apply font-code text-base tracking-normal;
+
+    &:not(.hljs) {
+      @apply bg-gray-300 text-darker px-1;
     }
+  }
+
+  a[target=_blank] {
+    @apply text-blue-500 underline;
+  }
+
+  .nuxt-content-highlight .hljs {
+    @apply rounded-lg p-2;
   }
 }

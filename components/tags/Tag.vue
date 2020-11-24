@@ -2,7 +2,7 @@
   <li>
     <nuxt-link
       :to="localePath(to)"
-      class="link tag-link"
+      class="font-code"
       v-class:active="isActive">#{{ tag }}</nuxt-link>
   </li>
 </template>
@@ -33,26 +33,3 @@ export default {
   }
 };
 </script>
-
-<style
-  lang="scss"
-  scoped>
-li {
-  display: inline;
-  margin-right: $margin;
-  padding: $small-padding;
-
-  .tag-link {
-    font-family: 'Fira Code';
-    font-weight: 100;
-    font-size: 12px;
-    color: $darker;
-
-    &.active {
-      background-color: $darker;
-      color: $lightest;
-      padding: $small-padding;
-    }
-  }
-}
-</style>

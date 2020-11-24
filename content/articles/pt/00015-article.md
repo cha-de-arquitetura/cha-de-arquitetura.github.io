@@ -1,5 +1,6 @@
 ---
-title: PORTUGUESE Resolvendo o problema do CORS com Angular + @angular/cli e Vuejs + @vue/cli
+title: Resolvendo o problema do CORS com Angular + @angular/cli e Vuejs + @vue/cli
+description: Recentemente percebi que muitas pessoas estão tendo problema de CORS ao iniciar
 createdAt: 2020-11-10T17:00:00
 updatedAt: 2020-11-10T17:00:00
 author: giovane-souza

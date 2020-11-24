@@ -1,8 +1,7 @@
 <template>
   <button
-    id="twitter-button"
     type="button"
-    class="link-button social-button"
+    class="social-button"
     @click="share">
     <svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
       <path d="m386 53c0 5.523438-4.476562 10-10 10s-10-4.476562-10-10 4.476562-10 10-10 10 4.476562 10 10zm0 0"/>

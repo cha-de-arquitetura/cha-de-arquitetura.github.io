@@ -36,12 +36,12 @@ export default {
   &::after {
     content: 'T.issues';
     position: absolute;
-    bottom: 13px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: Roboto;
+    font-family: Montserrat;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   &:link,

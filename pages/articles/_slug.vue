@@ -1,31 +1,35 @@
 <template>
-  <ThreeColumnContent>
-    <h1 id="article-title" class="no-margin big-margin-top big-margin-bottom">{{ article.title }}</h1>
+  <DefaultContent class="max-w-screen-md mx-auto">
+    <h1 id="article-title" class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{{ article.title }}</h1>
 
-    <Tags :article="article" class="margin-bottom" />
+    <Tags :article="article" class="mb-2" />
 
-    <div id="article-description">
-      <AuthorPreview id="author-preview" :article="article" />
-
-      <div id="share-container">
-        <FacebookButton :article="article" />
-        <LinkedInButton :article="article" class="horizontal-margin" />
-        <TwitterButton :article="article" />
+    <div class="flex flex-row justify-between">
+      <div>
+        <AuthorPreview :article="article" />
       </div>
+
+      <client-only>
+        <ShareButton v-if="shareApiEnabled" :article="article"/>
+
+        <div v-else class="flex flex-row items-center">
+          <FacebookButton :article="article" class="mr-2" />
+          <LinkedInButton :article="article" class="mr-2" />
+          <TwitterButton :article="article" class="mr-2" />
+          <LinkButton :article="article" />
+        </div>
+      </client-only>
     </div>
 
-    <div id="article-content">
+    <hr class="my-4"/>
+
+    <article>
       <nuxt-content :document="article" />
-    </div>
-  </ThreeColumnContent>
+    </article>
+  </DefaultContent>
 </template>
 
 <script>
-import AuthorPreview from '@/components/AuthorPreview';
-import FacebookButton from '@/components/button/FacebookButton';
-import LinkedInButton from '@/components/button/LinkedInButton';
-import TwitterButton from '@/components/button/TwitterButton';
-import ThreeColumnContent from '@/components/ThreeColumnContent';
 import { ResolveContentLocale } from '~/utils/locale';
 import { ArticleMetaTags } from '~/utils/head';
 
@@ -37,7 +41,6 @@ export default {
       pt: '/artigos/:slug'
     }
   },
-  components: { FacebookButton, TwitterButton, LinkedInButton, AuthorPreview, ThreeColumnContent },
   async asyncData({ $content, params, app }) {
     const contentPath = `${ResolveContentLocale('articles', app.i18n)}/${params.slug}`;
 
@@ -56,31 +59,14 @@ export default {
       title: this.article.title,
       meta: ArticleMetaTags(this.article)
     }
+  },
+  computed: {
+    shareApiEnabled() {
+      if (process.client) {
+        return window.navigator.share != null;
+      }
+      return false;
+    }
   }
 };
 </script>
-
-<style
-  lang="scss"
-  scoped>
-#article-title {
-  color: $darkest;
-}
-
-#article-description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  #author-preview {
-    width: 300px;
-  }
-
-  #share-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-</style>

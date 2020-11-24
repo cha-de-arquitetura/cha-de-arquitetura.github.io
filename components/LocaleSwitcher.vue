@@ -1,13 +1,14 @@
 <template>
-  <div id="locale-switcher">
+  <div class="flex flex-row">
     <!--Icons made by Freepik from www.flaticon.com-->
     <nuxt-link
       id="pt-br"
-      class="locale"
+      class="locale mr-2"
       v-class:active="isPT"
       :to="switchLocalePath('pt')">
       <svg
         id="brazil-flag"
+        class="fill-current text-primary"
         enable-background="new 0 0 512 512"
         height="512"
         viewBox="0 0 512 512"
@@ -99,31 +100,23 @@ export default {
 <style
   lang="scss"
   scoped>
-#locale-switcher {
-  display: flex;
-  flex-direction: row;
+.locale {
+  width: 35px;
+  height: auto;
+  @apply flex;
 
-  .locale {
+  svg {
     width: 35px;
     height: auto;
+    @apply fill-current text-darkest;
+  }
 
-    &:first-child {
-      margin-right: 8px;
-    }
+  &.nuxt-link-exact-active svg {
+    @apply text-primary;
+  }
 
-    svg {
-      fill: $darkest;
-      width: 35px;
-      height: auto;
-    }
-
-    &.nuxt-link-exact-active svg {
-      fill: $primary;
-    }
-
-    &:hover:not(.nuxt-link-exact-active) svg {
-      fill: $lighter;
-    }
+  &:hover:not(.nuxt-link-exact-active) svg {
+    @apply text-lighter;
   }
 }
 </style>

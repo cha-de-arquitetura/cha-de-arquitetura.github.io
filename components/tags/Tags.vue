@@ -1,8 +1,9 @@
 <template>
-  <ul id="tags-container" class="no-margin">
+  <ul class="list-none">
     <li
       v-for="tag in article.tags"
-      :key="`${article}-${tag}`">#{{tag}}</li>
+      :key="`${article}-${tag}`"
+      class="font-code font-light inline mr-2 text-xs text-gray-700">#{{tag}}</li>
   </ul>
 </template>
 
@@ -13,21 +14,3 @@ export default {
   props: ['article']
 };
 </script>
-
-<style
-  lang="scss"
-  scoped>
-#tags-container {
-  padding: 0;
-
-  li {
-    display: inline;
-    margin-right: $margin;
-    padding: $small-padding;
-    font-family: 'Fira Code';
-    font-weight: 100;
-    font-size: 12px;
-    color: $darker;
-  }
-}
-</style>

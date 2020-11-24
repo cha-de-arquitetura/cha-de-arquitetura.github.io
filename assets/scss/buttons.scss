@@ -1,27 +1,7 @@
-.link-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
-}
-
 .social-button {
-  width: 25px;
-  height: 25px;
+  @apply w-6 h-6;
 
   svg {
-    width: 25px;
-    height: 25px;
-    transition: fill;
-    transition-duration: 0.3s;
-    fill: $darkest;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    svg {
-      fill: $lighter;
-    }
+    @apply w-6 h-6;
   }
 }

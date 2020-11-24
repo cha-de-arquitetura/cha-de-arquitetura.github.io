@@ -1,16 +1,20 @@
 <template>
-  <div id="author-preview">
-    <AuthorPhoto :author="article.author.photo" class="margin-right" />
-    <div id="author-detail">
-      <div>
-        <nuxt-link :to="localePath(to)" class="link">{{ article.author.name }}</nuxt-link>
-      </div>
-      <div>
-        <p class="no-margin margin-top">
-          <span aria-label="release date">{{ formattedDate }}</span> -
-          <span aria-label="reading time">{{ $t('readingTime', readingTime) }}</span>
-        </p>
-      </div>
+  <div class="flex flex-row">
+    <nuxt-link
+      :to="localePath(to)">
+      <AuthorPhoto
+        :author="article.author.photo"
+        class="mr-4" />
+    </nuxt-link>
+    <div class="flex flex-col justify-around">
+      <nuxt-link
+        :to="localePath(to)"
+        class="text-base font-normal text-gray-800">{{ article.author.name }}
+      </nuxt-link>
+      <p class="text-xs font-thin text-gray-700">
+        <span aria-label="release date">{{ formattedDate }}</span> -
+        <span aria-label="reading time">{{ $t('readingTime', readingTime) }}</span>
+      </p>
     </div>
   </div>
 </template>
@@ -29,7 +33,7 @@ export default {
         params: {
           slug: article.author.slug
         }
-      }
+      };
     },
     formattedDate({ article }) {
       return FormatDate(article.createdAt, this.$i18n.locale);
@@ -42,35 +46,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-#author-preview {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-
-  #author-detail {
-    height: 40px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    #author-photo {
-      width: 50px;
-      height: auto;
-      border-radius: 40px;
-    }
-
-    p {
-      color: lighten($darkest, 20%);
-      font-size: 13px;
-      font-weight: 300;
-    }
-  }
-}
-</style>

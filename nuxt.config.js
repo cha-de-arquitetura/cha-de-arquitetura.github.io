@@ -48,12 +48,13 @@ export default {
         const { minutes } = require('reading-time')(document.text);
 
         document.readingTime = minutes;
-        document.url = `https://techissues.dev${document.path}`;
 
         if (document.dir.endsWith('pt')) {
           document.locale = 'pt_BR';
+          document.url = `https://techissues.dev/pt/artigos/${document.slug}`;
         } else {
           document.locale = 'en_US';
+          document.url = `https://techissues.dev/articles/${document.slug}`;
         }
       }
     }
