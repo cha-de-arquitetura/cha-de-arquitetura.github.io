@@ -52,6 +52,19 @@
   }
 
   .nuxt-content-highlight .hljs {
-    @apply rounded-lg p-2;
+    @apply rounded-lg p-2 my-4;
+  }
+
+  .video {
+    @apply w-full max-w-screen-md mx-auto h-video;
+  }
+
+  table {
+    @apply w-full table-auto border-collapse border border-green-800;
+
+    th,
+    td {
+      @apply border border-green-600;
+    }
   }
 }

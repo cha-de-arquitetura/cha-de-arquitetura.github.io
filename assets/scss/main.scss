@@ -5,3 +5,19 @@
 @import './fonts';
 @import './buttons';
 @import './nuxt-content';
+
+* {
+  @apply font-sans font-normal text-base;
+}
+
+@mixin bgFooter {
+  background-color: rgba(darken(#3c896d, 20%), 0.2);
+}
+
+.bg-footer {
+  @include bgFooter;
+}
+
+body {
+  @include bgFooter;
+}

@@ -1,5 +1,5 @@
 import highlightjs from 'highlight.js';
-import { sitemapPt, sitemapEn } from './utils/sitemap';
+import { sitemapEn, sitemapPt } from './utils/sitemap';
 import { globalHead } from './utils/head';
 
 export default {
@@ -9,14 +9,18 @@ export default {
     'highlight.js/styles/androidstudio.css'
   ],
   plugins: [
-    './plugins/v-stylish.js'
+    './plugins/v-stylish.js',
+    './plugins/vue-lazyload.js'
   ],
   components: true,
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/style-resources',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'nuxt-compress',
+    '@nuxtjs/svg',
+    // '@aceforth/nuxt-optimized-images'
   ],
   modules: [
     '@nuxtjs/pwa',
@@ -34,14 +38,11 @@ export default {
       ],
       highlighter(rawCode, lang) {
         const highlightedCode = highlightjs.highlight(lang, rawCode).value;
-        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`
+        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`;
       }
     }
   },
   build: {},
-  styleResources: {
-    scss: './assets/scss/vars/*.scss'
-  },
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
@@ -63,13 +64,13 @@ export default {
     locales: [
       {
         code: 'en',
-        iso: 'en-US',
+        iso: 'en_US',
         file: 'en-US.js',
         name: 'English'
       },
       {
         code: 'pt',
-        iso: 'pt-BR',
+        iso: 'pt_ BR',
         file: 'pt-BR.js',
         name: 'Português'
       }
@@ -106,5 +107,17 @@ export default {
     hostname: 'https://techissues.dev',
     sitemaps: [sitemapEn, sitemapPt]
   },
-  head: globalHead
+  head: globalHead,
+  // optimizedImages: {
+  //   optimizeImages: true,
+  //   optimizeImagesInDev: true
+  // },
+  'nuxt-compress': {
+    gzip: {
+      cache: true
+    },
+    brotli: {
+      threshold: 10240
+    }
+  }
 };

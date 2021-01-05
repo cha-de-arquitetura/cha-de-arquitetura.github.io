@@ -20,7 +20,8 @@ export const globalHead = {
       type: 'image/x-icon',
       href: '/favicon.svg'
     }
-  ]
+  ],
+  script: [...analyticsTag()]
 };
 
 export const facebookScripts = [
@@ -131,4 +132,24 @@ export function ArticleMetaTags(article) {
   }
 
   return metaTags;
+};
+
+function analyticsTag() {
+  if (process.env.NODE_ENV !== 'production') {
+    return [];
+  }
+  return [
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-XLQVWML064',
+      async: true
+    },
+    {
+      vmid: 'analytics-tag',
+      innerHTML: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XLQVWML064');`
+    }
+  ]
 }
