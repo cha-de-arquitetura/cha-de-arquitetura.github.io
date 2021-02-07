@@ -1,21 +1,19 @@
 <template>
   <DefaultContent class="max-w-screen-md mx-auto">
-    <h1 id="article-title" class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{{ article.title }}</h1>
+    <h1 class="article-title">{{ article.title }}</h1>
 
     <Tags :article="article" class="mb-2" />
 
-    <div class="flex flex-row justify-between">
-      <div>
-        <AuthorPreview :article="article" />
-      </div>
+    <div class="article-metadata">
+      <AuthorPreview :article="article" />
 
       <client-only>
-        <ShareButton v-if="shareApiEnabled" :article="article"/>
+        <ShareButton v-if="shareApiEnabled" :article="article" class="mobile-share"/>
 
-        <div v-else class="flex flex-row items-center">
-          <FacebookButton :article="article" class="mr-2" />
-          <LinkedInButton :article="article" class="mr-2" />
-          <TwitterButton :article="article" class="mr-2" />
+        <div v-else class="share-list">
+          <FacebookButton :article="article" />
+          <LinkedInButton :article="article" />
+          <TwitterButton :article="article"/>
           <LinkButton :article="article" />
         </div>
       </client-only>
@@ -70,3 +68,45 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.article-title {
+  @apply text-3xl font-bold text-gray-900 mb-4;
+}
+
+.article-metadata {
+  @apply flex flex-col justify-around;
+
+  .share-list {
+    @apply flex flex-row justify-around items-center mt-4;
+  }
+}
+
+@screen md {
+  .article-metadata {
+    @apply flex-row justify-between;
+
+    .share-list {
+      @apply mt-0;
+
+      *:not(:first-child) {
+        @apply ml-2.5;
+      }
+    }
+  }
+}
+
+@screen lg {
+  .article-title {
+    @apply text-4xl;
+  }
+}
+
+@layer utilities {
+  @variants dark {
+    .article-title {
+      @apply text-white;
+    }
+  }
+}
+</style>

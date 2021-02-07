@@ -1,5 +1,6 @@
 <template>
-  <DefaultContent class="grid grid-cols-1 lg:grid-cols-3 gap-4 auto-rows-max">
+  <DefaultContent class="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 auto-rows-max">
+    <ArticleCard :article="lastArticle" class="col-span-full" />
     <ArticleCard
       v-for="article in articles"
       :key="article.slug"
@@ -25,8 +26,18 @@ export default {
       article.author = await $content(authorPath).without(['body', 'text']).fetch();
     }
 
+    // while (articles.length < 20) {
+    //   articles.push({
+    //     ...articles[0],
+    //     slug: articles.length + 1
+    //   })
+    // }
+
+    const lastArticle = articles.shift();
+
     return {
-      articles
+      articles,
+      lastArticle
     };
   },
   head: {

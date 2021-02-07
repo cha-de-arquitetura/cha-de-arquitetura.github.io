@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64.359" height="45.952" viewBox="0 0 64.359 45.952">
+  <g id="Group_18" data-name="Group 18" transform="translate(-645.858 -863.965)">
+    <g id="Group_16" data-name="Group 16" transform="translate(-476 146.116)">
+      <g id="Group_10" data-name="Group 10">
+        <g id="Group_3" data-name="Group 3" transform="matrix(-0.995, 0.105, -0.105, -0.995, 2616.602, 1274.254)">
+          <g id="Group_13" data-name="Group 13">
+            <path id="Rectangle_2" data-name="Rectangle 2" d="M3,0H8.148a3,3,0,0,1,3,3V29.429a3,3,0,0,1-3,3H0a0,0,0,0,1,0,0V3A3,3,0,0,1,3,0Z" transform="translate(1401.72 668.568) rotate(-39)" fill="#00a5ff"/>
+            <path id="Rectangle_3" data-name="Rectangle 3" d="M3,0H8.148a3,3,0,0,1,3,3V32.429a0,0,0,0,1,0,0H3a3,3,0,0,1-3-3V3A3,3,0,0,1,3,0Z" transform="translate(1405.59 707.203) rotate(-129)" fill="#00d8de"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_17" data-name="Group 17" transform="translate(1832.075 1627.766) rotate(180)">
+      <g id="Group_10-2" data-name="Group 10">
+        <g id="Group_3-2" data-name="Group 3" transform="matrix(-0.995, 0.105, -0.105, -0.995, 2616.602, 1274.254)">
+          <g id="Group_13-2" data-name="Group 13">
+            <path id="Rectangle_2-2" data-name="Rectangle 2" d="M3,0H8.148a3,3,0,0,1,3,3V29.429a3,3,0,0,1-3,3H0a0,0,0,0,1,0,0V3A3,3,0,0,1,3,0Z" transform="translate(1401.72 668.568) rotate(-39)" fill="#00a5ff"/>
+            <path id="Rectangle_3-2" data-name="Rectangle 3" d="M3,0H8.148a3,3,0,0,1,3,3V32.429a0,0,0,0,1,0,0H3a3,3,0,0,1-3-3V3A3,3,0,0,1,3,0Z" transform="translate(1405.59 707.203) rotate(-129)" fill="#00d8de"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="Path_17" data-name="Path 17" d="M5.78-20.066V-33.02H1.224V-35.7h12.06v2.68H8.728v12.954Z" transform="translate(671 915.499)" fill="#3d3f43"/>
+  </g>
+</svg>

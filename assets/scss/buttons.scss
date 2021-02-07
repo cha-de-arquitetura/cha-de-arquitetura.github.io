@@ -1,7 +1,15 @@
 .social-button {
-  @apply w-6 h-6;
+  @apply relative;
 
-  svg {
-    @apply w-6 h-6;
+  span {
+    @apply text-2xl;
+  }
+}
+
+@layer utilities {
+  @variants dark {
+    .social-button {
+      @apply text-white;
+    }
   }
 }

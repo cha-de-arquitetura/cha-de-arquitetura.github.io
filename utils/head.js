@@ -21,7 +21,10 @@ export const globalHead = {
       href: '/favicon.svg'
     }
   ],
-  script: [...analyticsTag()]
+  script: [...analyticsTag()],
+  __dangerouslyDisableSanitizersByTagID: {
+    gtag: ['innerHTML']
+  }
 };
 
 export const facebookScripts = [
@@ -61,7 +64,7 @@ export function ArticleMetaTags(article) {
     {
       name: 'og:locale:alternate',
       property: 'og:locale:alternate',
-      content: article.locale === 'en_US' ? 'pt_BR' : 'en_US'
+      content: article.locale === 'en-US' ? 'pt_BR' : 'en_US'
     },
     {
       name: 'og:site_name',
@@ -140,16 +143,14 @@ function analyticsTag() {
   }
   return [
     {
+      hid: 'gtm-gtag',
       src: 'https://www.googletagmanager.com/gtag/js?id=G-XLQVWML064',
       async: true
     },
     {
-      vmid: 'analytics-tag',
-      innerHTML: `window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XLQVWML064');`
+      type: 'text/javascript',
+      hid: 'gtag',
+      innerHTML: 'window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "G-XLQVWML064");'
     }
-  ]
+  ];
 }

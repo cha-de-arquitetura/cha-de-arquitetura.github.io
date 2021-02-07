@@ -2,19 +2,15 @@
   <button
     type="button"
     class="social-button"
+    aria-label="share"
     @click="share">
-    <ShareIcon/>
+    <i class="icon-share"></i>
   </button>
 </template>
 
 <script>
-import ShareIcon from '~/assets/icons/share.svg?inline';
-
 export default {
   name: 'FacebookButton',
-  components: {
-    ShareIcon
-  },
   props: ['article'],
   methods: {
     share() {

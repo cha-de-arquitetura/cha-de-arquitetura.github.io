@@ -1,34 +1,39 @@
 .nuxt-content {
+  * {
+    @apply break-all;
+  }
+
   h1,
   h2,
   h3,
   h4,
-  h5 {
-    @apply font-medium tracking-tight mt-8 mb-2 #{!important};
+  h5,
+  h6 {
+    @apply text-gray-800 font-medium tracking-tight mt-8 mb-2 ;
   }
 
   h1 {
-    @apply text-5xl #{!important};
+    @apply text-5xl;
   }
 
   h2 {
-    @apply text-4xl #{!important};
+    @apply text-4xl;
   }
 
   h3 {
-    @apply text-3xl #{!important};
+    @apply text-3xl;
   }
 
   h4 {
-    @apply text-2xl #{!important};
+    @apply text-2xl;
   }
 
   h5 {
-    @apply text-xl #{!important};
+    @apply text-xl;
   }
 
   h6 {
-    @apply text-lg #{!important};
+    @apply text-lg;
   }
 
   p,
@@ -51,8 +56,16 @@
     @apply text-blue-500 underline;
   }
 
-  .nuxt-content-highlight .hljs {
-    @apply rounded-lg p-2 my-4;
+  .nuxt-content-highlight {
+    @apply my-4;
+
+    .hljs-container {
+      @apply rounded-lg p-0.5;
+
+      .hljs {
+        @apply rounded-lg p-1.5;
+      }
+    }
   }
 
   .video {
@@ -60,11 +73,54 @@
   }
 
   table {
-    @apply w-full table-auto border-collapse border border-green-800;
+    @apply w-full table-auto border-collapse border border-ti-blue;
 
     th,
     td {
-      @apply border border-green-600;
+      @apply border border-ti-blue text-gray-800;
+    }
+  }
+}
+
+.dark {
+  .nuxt-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    dt,
+    span:not([class*="hljs"]),
+    blockquote {
+      @apply text-white;
+    }
+
+    code {
+      &:not(.hljs) {
+        @apply bg-ti-green text-gray-800;
+      }
+    }
+
+    .nuxt-content-highlight {
+      .hljs-container {
+        @apply bg-gradient-to-tl from-ti-green to-ti-blue;
+      }
+    }
+
+    a[target=_blank] {
+      @apply text-ti-blue;
+    }
+
+    table {
+      @apply border-ti-green;
+
+      th,
+      td {
+        @apply border-ti-green text-white;
+      }
     }
   }
 }

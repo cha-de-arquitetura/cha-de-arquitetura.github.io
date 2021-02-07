@@ -14,7 +14,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind', 'layer', 'variant', 'screen', 'mixin', 'include']
+        ignoreAtRules: ['tailwind', 'layer', 'variants', 'screen', 'mixin', 'include']
       }
     ],
     'at-rule-empty-line-before': [

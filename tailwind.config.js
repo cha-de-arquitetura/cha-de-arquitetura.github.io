@@ -7,7 +7,7 @@ module.exports = {
     ]
   },
   presets: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     screens: {
       sm: '640px',
@@ -35,7 +35,10 @@ module.exports = {
       lighter: '#4fb286',
       primary: '#3c896d',
       darker: '#2c363f',
-      darkest: '#253237'
+      darkest: '#253237',
+
+      'ti-blue': '#00A5FF',
+      'ti-green': '#00D8DE'
     },
     spacing: {
       px: '1px',

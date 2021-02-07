@@ -6,11 +6,13 @@ export default {
   target: 'static',
   css: [
     './assets/scss/main.scss',
-    'highlight.js/styles/androidstudio.css'
+    'highlight.js/styles/dracula.css',
+    './assets/fonts/icomoon/style.css'
   ],
   plugins: [
     './plugins/v-stylish.js',
-    './plugins/vue-lazyload.js'
+    './plugins/vue-lazyload.js',
+    './plugins/darkmode.client.js'
   ],
   components: true,
   buildModules: [
@@ -19,8 +21,7 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/tailwindcss',
     'nuxt-compress',
-    '@nuxtjs/svg',
-    // '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images'
   ],
   modules: [
     '@nuxtjs/pwa',
@@ -38,7 +39,7 @@ export default {
       ],
       highlighter(rawCode, lang) {
         const highlightedCode = highlightjs.highlight(lang, rawCode).value;
-        return `<pre><code class="hljs ${lang}">${highlightedCode}</code></pre>`;
+        return `<pre class="hljs-container"><code class="hljs ${lang}">${highlightedCode}</code></pre>`;
       }
     }
   },
@@ -51,10 +52,10 @@ export default {
         document.readingTime = minutes;
 
         if (document.dir.endsWith('pt')) {
-          document.locale = 'pt_BR';
+          document.locale = 'pt-BR';
           document.url = `https://techissues.dev/pt/artigos/${document.slug}`;
         } else {
-          document.locale = 'en_US';
+          document.locale = 'en-US';
           document.url = `https://techissues.dev/articles/${document.slug}`;
         }
       }
@@ -64,13 +65,13 @@ export default {
     locales: [
       {
         code: 'en',
-        iso: 'en_US',
+        iso: 'en-US',
         file: 'en-US.js',
         name: 'English'
       },
       {
         code: 'pt',
-        iso: 'pt_ BR',
+        iso: 'pt-BR',
         file: 'pt-BR.js',
         name: 'Português'
       }
@@ -108,10 +109,10 @@ export default {
     sitemaps: [sitemapEn, sitemapPt]
   },
   head: globalHead,
-  // optimizedImages: {
-  //   optimizeImages: true,
-  //   optimizeImagesInDev: true
-  // },
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true
+  },
   'nuxt-compress': {
     gzip: {
       cache: true

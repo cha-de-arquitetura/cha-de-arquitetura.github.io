@@ -3,19 +3,15 @@
     ref="button"
     type="button"
     class="social-button"
+    aria-label="copy-url"
     @click="share">
-    <LinkIcon/>
+    <span class="icon-copy"></span>
   </button>
 </template>
 
 <script>
-import LinkIcon from '~/assets/icons/link.svg?inline'
-
 export default {
-  name: 'FacebookButton',
-  components: {
-    LinkIcon
-  },
+  name: 'LinkButton',
   props: ['article'],
   methods: {
     share() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row">
+  <div class="author-preview">
     <nuxt-link
       :to="localePath(to)">
       <LazyPhoto
@@ -7,12 +7,12 @@
         :alt="article.author.name"
         class="mr-4" />
     </nuxt-link>
-    <div class="flex flex-col justify-around">
+    <div class="details">
       <nuxt-link
         :to="localePath(to)"
-        class="text-base font-normal text-gray-800">{{ article.author.name }}
+        class="author-name">{{ article.author.name }}
       </nuxt-link>
-      <p class="text-xs font-thin text-gray-700">
+      <p class="article-details">
         <span aria-label="release date">{{ formattedDate }}</span> -
         <span aria-label="reading time">{{ $t('readingTime', readingTime) }}</span>
       </p>
@@ -47,3 +47,39 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.author-preview {
+  @apply flex flex-row;
+
+  .details {
+    @apply flex flex-col justify-around;
+
+    .author-name {
+      @apply text-base font-normal text-gray-800;
+    }
+
+    .article-details,
+    .article-details * {
+      @apply text-sm font-thin text-gray-700;
+    }
+  }
+}
+
+@layer utilities {
+  @variants dark {
+    .author-preview {
+      .details {
+        .author-name {
+          @apply text-white;
+        }
+
+        .article-details,
+        .article-details * {
+          @apply text-gray-300;
+        }
+      }
+    }
+  }
+}
+</style>

@@ -2,19 +2,16 @@
   <button
     type="button"
     class="social-button"
+    aria-label="share-on-linkedin"
     @click="share">
-    <LinkedInIcon/>
+    <span class="icon-linkedin"></span>
   </button>
 </template>
 
 <script>
-import LinkedInIcon from '~/assets/icons/linkedin.svg?inline'
 
 export default {
   name: 'LinkedInButton',
-  components: {
-    LinkedInIcon
-  },
   props: ['article'],
   methods: {
     share() {

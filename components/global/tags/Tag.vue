@@ -2,7 +2,6 @@
   <li>
     <nuxt-link
       :to="localePath(to)"
-      class="font-code"
       v-class:active="isActive">#{{ tag }}</nuxt-link>
   </li>
 </template>

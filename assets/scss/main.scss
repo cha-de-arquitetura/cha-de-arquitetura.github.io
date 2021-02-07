@@ -10,14 +10,7 @@
   @apply font-sans font-normal text-base;
 }
 
-@mixin bgFooter {
-  background-color: rgba(darken(#3c896d, 20%), 0.2);
-}
-
-.bg-footer {
-  @include bgFooter;
-}
-
-body {
-  @include bgFooter;
+.bg-gradient {
+  background: rgb(0, 165, 255);
+  background: linear-gradient(135deg, rgba(0, 165, 255, 1) 0%, rgba(0, 216, 222, 1) 100%);
 }

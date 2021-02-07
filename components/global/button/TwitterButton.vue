@@ -2,20 +2,17 @@
   <button
     type="button"
     class="social-button"
+    aria-label="share-on-twitter"
     @click="share">
-    <TwitterIcon/>
+    <span class="icon-twitter"></span>
   </button>
 </template>
 
 <script>
 import { CreateShareURL } from '~/utils/twitter';
-import TwitterIcon from '~/assets/icons/twitter.svg?inline';
 
 export default {
   name: 'TwitterButton',
-  components: {
-    TwitterIcon
-  },
   props: ['article'],
   methods: {
     share() {

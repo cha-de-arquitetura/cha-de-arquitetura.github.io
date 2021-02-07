@@ -1,13 +1,15 @@
 <template>
-  <article class="grid gap-0 auto-rows-min bg-gray-100 rounded p-4">
-    <h2 class="text-xl font-bold text-gray-900">
-      <nuxt-link :to="localePath(to)">{{ article.title }}</nuxt-link>
-    </h2>
-    <nuxt-link :to="localePath(to)" class="mx-0 my-2 text-sm font-normal text-gray-800">
-      {{ article.description }}
-    </nuxt-link>
-    <Tags :article="article" class="mb-2" />
-    <AuthorPreview :article="article" />
+  <article class="article">
+    <div>
+      <h2>
+        <nuxt-link :to="localePath(to)">{{ article.title }}</nuxt-link>
+      </h2>
+      <nuxt-link :to="localePath(to)" class="description">
+        {{ article.description }}
+      </nuxt-link>
+      <Tags :article="article" class="mb-2" />
+      <AuthorPreview :article="article" />
+    </div>
   </article>
 </template>
 
@@ -36,3 +38,38 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.article {
+  @apply rounded relative p-0.5;
+
+  >div {
+    @apply rounded flex flex-col bg-gray-100 p-3.5 relative w-full h-full;
+
+    h2 {
+      @apply text-xl font-bold text-gray-900;
+    }
+
+    .description {
+      @apply mx-0 my-2 text-sm font-normal text-gray-800 flex-grow;
+    }
+  }
+}
+
+@layer utilities {
+  @variants dark {
+    .article {
+      @apply bg-gradient-to-tl from-ti-green to-ti-blue;
+
+      >div {
+        @apply bg-gray-700;
+
+        h2,
+        .description {
+          @apply text-white;
+        }
+      }
+    }
+  }
+}
+</style>

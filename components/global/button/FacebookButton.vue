@@ -2,20 +2,17 @@
   <button
     type="button"
     class="social-button"
+    aria-label="share-on-facebook"
     @click="share">
-    <FacebookIcon/>
+    <span class="icon-facebook"/>
   </button>
 </template>
 
 <script>
 import { facebookScripts } from '~/utils/head';
-import FacebookIcon from '~/assets/icons/facebook.svg?inline';
 
 export default {
   name: 'FacebookButton',
-  components: {
-    FacebookIcon
-  },
   props: ['article'],
   head: {
     script: facebookScripts
