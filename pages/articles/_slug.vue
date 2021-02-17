@@ -74,7 +74,7 @@ export default {
   @apply max-w-screen-md mx-auto;
 
   .article-title {
-    @apply text-3xl font-bold text-gray-900 mb-4;
+    @apply text-3xl font-bold text-white mb-4;
   }
 
   .articleMetadata {
@@ -82,14 +82,6 @@ export default {
 
     .shareList {
       @apply flex flex-row justify-around items-center mt-4;
-    }
-  }
-}
-
-.dark {
-  .article {
-    .article-title {
-      @apply text-white;
     }
   }
 }

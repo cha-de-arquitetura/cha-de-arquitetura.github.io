@@ -6,13 +6,12 @@ export default {
   target: 'static',
   css: [
     './assets/scss/main.scss',
-    'highlight.js/styles/dracula.css',
+    'highlight.js/styles/vs2015.css',
     './assets/fonts/icomoon/style.css'
   ],
   plugins: [
     './plugins/v-stylish.js',
-    './plugins/vue-lazyload.js',
-    './plugins/color-mode.client.js'
+    './plugins/vue-lazyload.js'
   ],
   components: true,
   buildModules: [

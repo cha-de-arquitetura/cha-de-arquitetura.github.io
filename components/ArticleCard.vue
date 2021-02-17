@@ -47,32 +47,17 @@ export default {
 
 <style lang="scss" scoped>
 .article {
-  @apply rounded relative p-0.5;
+  @apply rounded relative p-0.5 bg-gradient-to-tl from-ti-green to-ti-blue;
 
   >div {
-    @apply rounded flex flex-col bg-gray-100 p-3.5 relative w-full h-full;
+    @apply rounded flex flex-col bg-gray-700 p-3.5 relative w-full h-full;
 
     h2 {
-      @apply text-xl font-bold text-gray-900;
+      @apply text-xl font-bold text-white;
     }
 
     .description {
-      @apply mx-0 my-2 text-sm font-normal text-gray-800 flex-grow;
-    }
-  }
-}
-
-.dark {
-  .article {
-    @apply bg-gradient-to-tl from-ti-green to-ti-blue;
-
-    >div {
-      @apply bg-gray-700;
-
-      h2,
-      .description {
-        @apply text-white;
-      }
+      @apply mx-0 my-2 text-sm font-normal text-white flex-grow;
     }
   }
 }

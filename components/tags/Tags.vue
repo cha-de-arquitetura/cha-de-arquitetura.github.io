@@ -21,15 +21,7 @@ export default {
   @apply list-none;
 
   .tag {
-    @apply font-code font-light inline mr-2 text-xs text-gray-700;
-  }
-}
-
-.dark {
-  .tag-list {
-    .tag {
-      @apply text-gray-300;
-    }
+    @apply font-code font-light inline mr-2 text-xs text-gray-300;
   }
 }
 </style>

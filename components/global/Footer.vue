@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p class="description">
-      &copy; {{ copyright }}, techissues.dev <br />
+      &copy; {{ copyright }}, <a class="text-xs" href="https://techissues.dev">techissues.dev</a> <br />
       {{ $t('footer.contact') }}: <a class="mailTo" href="mailto:team@techissues.dev" target="_blank">team@techissues.dev</a>
     </p>
   </div>
@@ -32,18 +32,10 @@ function copyright() {
   @apply container mx-auto p-4 max-w-screen-lg;
 
   .description {
-    @apply text-center;
+    @apply text-center text-white text-xs;
 
     .mailTo {
-      @apply text-ti-blue underline;
-    }
-  }
-}
-
-.dark {
-  .footer {
-    .description {
-      @apply text-white;
+      @apply text-ti-blue underline text-xs;
     }
   }
 }

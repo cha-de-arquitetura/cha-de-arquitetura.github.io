@@ -9,7 +9,7 @@
   h4,
   h5,
   h6 {
-    @apply text-gray-800 font-medium tracking-tight mt-8 mb-2 ;
+    @apply text-white font-medium tracking-tight mt-8 mb-2 ;
   }
 
   h1 {
@@ -41,26 +41,26 @@
   dt,
   span:not([class*="hljs"]),
   blockquote {
-    @apply text-gray-800 text-lg tracking-normal leading-8 font-normal;
+    @apply text-white text-lg tracking-normal leading-8 font-normal;
   }
 
   code {
     @apply font-code text-base tracking-normal;
 
     &:not(.hljs) {
-      @apply bg-gray-300 text-darker px-1;
+      @apply bg-ti-green text-gray-800 px-1;
     }
   }
 
   a[target=_blank] {
-    @apply text-blue-500 underline;
+    @apply text-ti-blue underline;
   }
 
   .nuxt-content-highlight {
     @apply my-4;
 
     .hljs-container {
-      @apply rounded-lg p-0.5;
+      @apply rounded-lg p-0.5 bg-gradient-to-tl from-ti-green to-ti-blue;
 
       .hljs {
         @apply rounded-lg p-1.5;
@@ -73,54 +73,11 @@
   }
 
   table {
-    @apply w-full table-auto border-collapse border border-ti-blue;
+    @apply w-full table-auto border-collapse border border-ti-green;
 
     th,
     td {
-      @apply border border-ti-blue text-gray-800;
-    }
-  }
-}
-
-.dark {
-  .nuxt-content {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    li,
-    dt,
-    span:not([class*="hljs"]),
-    blockquote {
-      @apply text-white;
-    }
-
-    code {
-      &:not(.hljs) {
-        @apply bg-ti-green text-gray-800;
-      }
-    }
-
-    .nuxt-content-highlight {
-      .hljs-container {
-        @apply bg-gradient-to-tl from-ti-green to-ti-blue;
-      }
-    }
-
-    a[target=_blank] {
-      @apply text-ti-blue;
-    }
-
-    table {
-      @apply border-ti-green;
-
-      th,
-      td {
-        @apply border-ti-green text-white;
-      }
+      @apply border border-ti-green text-white;
     }
   }
 }

@@ -6,14 +6,14 @@
 @import './buttons';
 @import './nuxt-content';
 
-* {
-  @apply font-sans font-normal text-base;
-}
-
-.nuxt-progress {
-  @apply bg-gradient-to-l from-ti-green to-ti-blue;
-}
-
-.dark {
+html {
   @apply bg-gray-800;
+
+  * {
+    @apply font-sans font-normal text-base;
+  }
+
+  .nuxt-progress {
+    @apply bg-gradient-to-l from-ti-green to-ti-blue;
+  }
 }

@@ -26,7 +26,7 @@ export default {
   lang="scss"
   scoped>
 .locale {
-  @apply align-middle self-center text-gray-800 font-light;
+  @apply align-middle self-center text-white font-light;
 
   &:first-child {
     @apply mr-2 pr-2 border-r border-darker;
@@ -38,17 +38,6 @@ export default {
 
   &:hover:not(.nuxt-link-exact-active) {
     @apply text-ti-green;
-  }
-}
-
-/* stylelint-disable no-descending-specificity */
-.dark {
-  .locale {
-    @apply text-white;
-
-    &.nuxt-link-exact-active {
-      @apply text-ti-green;
-    }
   }
 }
 </style>

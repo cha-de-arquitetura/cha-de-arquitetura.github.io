@@ -63,13 +63,13 @@ export default {
 
 <style lang="scss">
 .authorDetails {
-  @apply relative justify-start mt-24 mb-4 p-8 pt-20 w-full bg-ti-blue rounded text-white;
+  @apply relative justify-start mt-24 mb-4 p-8 pt-20 w-full bg-gradient-to-tl from-ti-green to-ti-blue rounded text-white;
 
   .authorPhotoContainer {
     @apply inline absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 text-center;
 
     .authorPhoto {
-      @apply box-content w-28 rounded-full bg-white border-8 border-white;
+      @apply box-content w-28 rounded-full border-8 bg-gray-800 border-gray-800;
     }
   }
 
@@ -93,18 +93,6 @@ export default {
         .socialIcon {
           @apply text-3xl text-white fill-current inline-block;
         }
-      }
-    }
-  }
-}
-
-.dark {
-  .authorDetails {
-    @apply bg-gradient-to-tl from-ti-green to-ti-blue;
-
-    .authorPhotoContainer {
-      .authorPhoto {
-        @apply bg-gray-800 border-gray-800;
       }
     }
   }

@@ -3,11 +3,11 @@
     <nuxt-link :to="localePath('/')">
       <img
         class="image"
-        :src="require(`~/assets/icons/logo/${image}.svg`)"
-        alt="Tech Issues Logo" />
+        src="~assets/icons/t.issues-white.min.svg"
+        alt="Tech Issues Logo"/>
       <img
         class="shortImage"
-        :src="require(`~/assets/icons/logo/${shortImage}.svg`)"
+        src="~assets/icons/t.issues-short-white.min.svg"
         alt="Tech Issues Logo - Mobile version"/>
     </nuxt-link>
     <LocaleSwitcher/>
@@ -15,24 +15,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
-  name: 'Header',
-  computed: {
-    ...mapGetters(['isDarkMode']),
-    image,
-    shortImage
-  }
+  name: 'Header'
 };
-
-function image() {
-  return this.isDarkMode ? 't.issues-white.min' : 't.issues.min';
-}
-
-function shortImage() {
-  return this.isDarkMode ? 't.issues-short-white.min' : 't.issues-short.min';
-}
 </script>
 
 <style

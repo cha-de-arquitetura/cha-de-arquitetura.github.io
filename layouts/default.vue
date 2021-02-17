@@ -14,10 +14,10 @@
 
 <style lang="scss" scoped>
 .layoutContainer {
-  @apply w-full bg-white;
+  @apply w-full bg-gray-800;
 
   .headerContainer {
-    @apply container mx-auto p-4 bg-white;
+    @apply container mx-auto p-4 bg-gray-800;
   }
 
   .contentContainer {
@@ -26,16 +26,6 @@
 
   .footerContainer {
     @apply w-full mt-4 mb-2;
-  }
-}
-
-.dark {
-  .layoutContainer {
-    @apply bg-gray-800;
-
-    .headerContainer {
-      @apply bg-gray-800;
-    }
   }
 }
 

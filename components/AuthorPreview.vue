@@ -56,27 +56,12 @@ export default {
     @apply flex flex-col justify-around;
 
     .author-name {
-      @apply text-base font-normal text-gray-800;
+      @apply text-base font-normal text-white;
     }
 
     .article-details,
     .article-details * {
-      @apply text-sm font-thin text-gray-700;
-    }
-  }
-}
-
-.dark {
-  .author-preview {
-    .details {
-      .author-name {
-        @apply text-white;
-      }
-
-      .article-details,
-      .article-details * {
-        @apply text-gray-300;
-      }
+      @apply text-sm font-thin text-gray-300;
     }
   }
 }
