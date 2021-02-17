@@ -1,8 +1,8 @@
 <template>
   <button
     type="button"
-    class="social-button"
-    aria-label="share-on-linkedin"
+    class="socialButton"
+    aria-label="Share On LinkedIn"
     @click="share">
     <span class="icon-linkedin"></span>
   </button>

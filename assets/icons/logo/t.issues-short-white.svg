@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70.442" height="31.844" viewBox="0 0 70.442 31.844">
+  <g id="Group_5" data-name="Group 5" transform="translate(-373.117 -454.811)">
+    <g id="Group_15" data-name="Group 15" transform="translate(-249.033 -320.842)">
+      <g id="Group_12" data-name="Group 12" transform="translate(620.708 775.157)">
+        <g id="Group_10" data-name="Group 10" transform="translate(0 0)">
+          <g id="Group_3" data-name="Group 3" transform="translate(24.792 30.559) rotate(173.976)">
+            <g id="Group_13" data-name="Group 13" transform="translate(0 0)">
+              <path id="Rectangle_2" data-name="Rectangle 2" d="M2.018,0H5.482A2.018,2.018,0,0,1,7.5,2.018V19.8a2.018,2.018,0,0,1-2.018,2.018H0V2.018A2.018,2.018,0,0,1,2.018,0Z" transform="translate(2.116 4.72) rotate(-39)" fill="#00a5ff"/>
+              <path id="Rectangle_3" data-name="Rectangle 3" d="M2.018,0H5.482A2.018,2.018,0,0,1,7.5,2.018v19.8H2.018A2.018,2.018,0,0,1,0,19.8V2.018A2.018,2.018,0,0,1,2.018,0Z" transform="translate(4.72 30.712) rotate(-129)" fill="#00d8de"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Group_14" data-name="Group 14" transform="translate(694.033 807.992) rotate(180)">
+        <g id="Group_10-2" data-name="Group 10" transform="translate(0 0)">
+          <g id="Group_3-2" data-name="Group 3" transform="translate(24.792 30.559) rotate(173.976)">
+            <g id="Group_13-2" data-name="Group 13" transform="translate(0 0)">
+              <path id="Rectangle_2-2" data-name="Rectangle 2" d="M2.018,0H5.482A2.018,2.018,0,0,1,7.5,2.018V19.8a2.018,2.018,0,0,1-2.018,2.018H0V2.018A2.018,2.018,0,0,1,2.018,0Z" transform="translate(2.116 4.72) rotate(-39)" fill="#00a5ff"/>
+              <path id="Rectangle_3-2" data-name="Rectangle 3" d="M2.018,0H5.482A2.018,2.018,0,0,1,7.5,2.018v19.8H2.018A2.018,2.018,0,0,1,0,19.8V2.018A2.018,2.018,0,0,1,2.018,0Z" transform="translate(4.72 30.712) rotate(-129)" fill="#00d8de"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="Path_2" data-name="Path 2" d="M10.4,0A4.3,4.3,0,0,1,7.22-1.22,4.406,4.406,0,0,1,6-4.48v-11.2H1.04v-4.16H6V-26h5.04v6.16h5.44v4.16H11.04V-5.36q0,1.2,1.12,1.2H16V0Z" transform="translate(391.837 484.5)" fill="#fff"/>
+    <g id="Group_4" data-name="Group 4" transform="matrix(0.996, -0.087, 0.087, 0.996, -39.441, 38.116)">
+      <rect id="Rectangle_2-3" data-name="Rectangle 2" width="7" height="29" rx="2" transform="translate(417.413 455.83) rotate(16)" fill="#fff8f8"/>
+    </g>
+  </g>
+</svg>

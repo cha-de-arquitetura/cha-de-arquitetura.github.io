@@ -12,7 +12,7 @@ export default {
   plugins: [
     './plugins/v-stylish.js',
     './plugins/vue-lazyload.js',
-    './plugins/darkmode.client.js'
+    './plugins/color-mode.client.js'
   ],
   components: true,
   buildModules: [

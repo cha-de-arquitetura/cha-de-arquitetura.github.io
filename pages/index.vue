@@ -1,18 +1,22 @@
 <template>
-  <DefaultContent class="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 auto-rows-max">
+  <DefaultContent class="home">
     <ArticleCard :article="lastArticle" class="col-span-full" />
     <ArticleCard
       v-for="article in articles"
       :key="article.slug"
-      :article="article" />
+      :article="article"/>
   </DefaultContent>
 </template>
 
 <script>
+import ArticleCard from '~/components/ArticleCard';
 import { ResolveContentLocale } from '~/utils/locale';
 
 export default {
   name: 'Home',
+  components: {
+    ArticleCard
+  },
   async asyncData({ $content, app }) {
     const contentPath = ResolveContentLocale('articles', app.i18n);
 
@@ -45,3 +49,17 @@ export default {
   }
 };
 </script>
+
+<style
+  lang="scss"
+  scoped>
+.home {
+  @apply max-w-screen-lg mx-auto grid grid-cols-1 gap-4 auto-rows-max;
+}
+
+@screen lg {
+  .home {
+    @apply grid-cols-2;
+  }
+}
+</style>

@@ -1,8 +1,8 @@
 <template>
   <button
     type="button"
-    class="social-button"
-    aria-label="share"
+    class="socialButton"
+    aria-label="Share"
     @click="share">
     <i class="icon-share"></i>
   </button>

@@ -66,18 +66,16 @@ export default {
   }
 }
 
-@layer utilities {
-  @variants dark {
-    .author-preview {
-      .details {
-        .author-name {
-          @apply text-white;
-        }
+.dark {
+  .author-preview {
+    .details {
+      .author-name {
+        @apply text-white;
+      }
 
-        .article-details,
-        .article-details * {
-          @apply text-gray-300;
-        }
+      .article-details,
+      .article-details * {
+        @apply text-gray-300;
       }
     }
   }

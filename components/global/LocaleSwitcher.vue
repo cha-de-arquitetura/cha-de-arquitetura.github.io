@@ -26,29 +26,28 @@ export default {
   lang="scss"
   scoped>
 .locale {
-  @apply align-middle self-center text-darker font-light;
+  @apply align-middle self-center text-gray-800 font-light;
 
   &:first-child {
     @apply mr-2 pr-2 border-r border-darker;
   }
 
   &.nuxt-link-exact-active {
-    @apply text-primary underline font-normal;
+    @apply text-ti-blue underline font-normal;
   }
 
   &:hover:not(.nuxt-link-exact-active) {
-    @apply text-lighter;
+    @apply text-ti-green;
   }
 }
 
-@layer utilities {
-  @variants dark {
-    .locale {
-      @apply text-white;
+/* stylelint-disable no-descending-specificity */
+.dark {
+  .locale {
+    @apply text-white;
 
-      &.nuxt-link-exact-active {
-        @apply text-ti-green;
-      }
+    &.nuxt-link-exact-active {
+      @apply text-ti-green;
     }
   }
 }

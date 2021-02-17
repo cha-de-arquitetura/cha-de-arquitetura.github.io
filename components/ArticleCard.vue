@@ -14,12 +14,18 @@
 </template>
 
 <script>
+import AuthorPreview from '~/components/AuthorPreview';
+import Tags from '~/components/tags/Tags';
 import { ReadingTime } from '~/utils/date-time';
 
 export default {
   name: 'ArticleCard',
   props: {
     article: Object
+  },
+  components: {
+    AuthorPreview,
+    Tags
   },
   computed: {
     to({ article }) {
@@ -56,18 +62,16 @@ export default {
   }
 }
 
-@layer utilities {
-  @variants dark {
-    .article {
-      @apply bg-gradient-to-tl from-ti-green to-ti-blue;
+.dark {
+  .article {
+    @apply bg-gradient-to-tl from-ti-green to-ti-blue;
 
-      >div {
-        @apply bg-gray-700;
+    >div {
+      @apply bg-gray-700;
 
-        h2,
-        .description {
-          @apply text-white;
-        }
+      h2,
+      .description {
+        @apply text-white;
       }
     }
   }

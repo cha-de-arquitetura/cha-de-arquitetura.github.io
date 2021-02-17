@@ -10,7 +10,10 @@
   @apply font-sans font-normal text-base;
 }
 
-.bg-gradient {
-  background: rgb(0, 165, 255);
-  background: linear-gradient(135deg, rgba(0, 165, 255, 1) 0%, rgba(0, 216, 222, 1) 100%);
+.nuxt-progress {
+  @apply bg-gradient-to-l from-ti-green to-ti-blue;
+}
+
+.dark {
+  @apply bg-gray-800;
 }

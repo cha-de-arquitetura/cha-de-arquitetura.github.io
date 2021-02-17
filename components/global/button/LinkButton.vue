@@ -2,8 +2,8 @@
   <button
     ref="button"
     type="button"
-    class="social-button"
-    aria-label="copy-url"
+    class="socialButton"
+    aria-label="Copy URL"
     @click="share">
     <span class="icon-copy"></span>
   </button>

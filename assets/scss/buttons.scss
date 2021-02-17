@@ -1,15 +1,17 @@
-.social-button {
-  @apply relative;
+.socialButton {
+  @apply relative outline-none text-gray-800;
+
+  &:focus {
+    @apply outline-none;
+  }
 
   span {
     @apply text-2xl;
   }
 }
 
-@layer utilities {
-  @variants dark {
-    .social-button {
-      @apply text-white;
-    }
+.dark {
+  .socialButton {
+    @apply text-white;
   }
 }

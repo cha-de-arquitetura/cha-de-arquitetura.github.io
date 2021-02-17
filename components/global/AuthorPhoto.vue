@@ -18,8 +18,8 @@ export default {
 };
 </script>
 
-<style scoped>
-  img {
-    @apply w-12 rounded-3xl;
-  }
-</style>
+<!--<style scoped>-->
+<!--  img {-->
+<!--    @apply w-12 rounded-3xl;-->
+<!--  }-->
+<!--</style>-->

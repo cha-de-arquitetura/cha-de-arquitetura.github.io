@@ -15,12 +15,6 @@
     "*.{js,vue}": "eslint",
     "*.{css,vue}": "stylelint"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.12.2",
@@ -45,27 +39,28 @@
     "@nuxtjs/sitemap": "2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
-    "@nuxtjs/tailwindcss": "3.2.0",
-    "autoprefixer": "9.8.6",
+    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.10.0",
     "eslint-plugin-nuxt": "^1.0.0",
-    "husky": "^4.3.0",
+    "fibers": "^5.0.0",
     "imagemin-gifsicle": "7.0.0",
     "imagemin-mozjpeg": "9.0.0",
     "imagemin-pngquant": "9.0.1",
     "lint-staged": "^10.4.0",
     "lqip-loader": "2.2.1",
     "node-sass": "^5.0.0",
-    "nuxt-compress": "4.1.0",
-    "postcss": "7.0.35",
+    "nuxt-compress": "^4.1.0",
+    "postcss": "^7",
     "reading-time": "1.2.0",
     "remark-emoji": "2.1.0",
     "remark-footnotes": "2.0.0",
     "sass-loader": "^10.0.5",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@2.0.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "webp-loader": "0.6.0"
   }
 }

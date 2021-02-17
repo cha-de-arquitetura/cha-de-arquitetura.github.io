@@ -1,8 +1,8 @@
 <template>
   <button
     type="button"
-    class="social-button"
-    aria-label="share-on-twitter"
+    class="socialButton"
+    aria-label="Share on Twitter"
     @click="share">
     <span class="icon-twitter"></span>
   </button>
