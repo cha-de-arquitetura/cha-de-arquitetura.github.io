@@ -58,7 +58,7 @@
     "remark-emoji": "2.1.0",
     "remark-footnotes": "2.0.0",
     "sass-loader": "^10.0.5",
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.11.0",
     "stylelint-config-standard": "^20.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "webp-loader": "0.6.0"
