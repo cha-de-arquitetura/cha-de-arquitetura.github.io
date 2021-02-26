@@ -33,8 +33,8 @@ export default {
     markdown: {
       remarkPlugins: [
         'remark-footnotes',
-        'remark-emoji',
-        '@fec/remark-a11y-emoji'
+        ['remark-emoji', { emoticon: true }]
+        // ['@fec/remark-a11y-emoji', { emoticon: true }] // TODO verify errors
       ],
       highlighter(rawCode, lang) {
         const highlightedCode = highlightjs.highlight(lang, rawCode).value;

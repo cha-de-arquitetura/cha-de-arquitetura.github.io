@@ -1,7 +1,7 @@
 ---
-title: Resolvendo o problema do CORS com Angular + @angular/cli e Vuejs + @vue/cli
-createdAt: 2020-11-10T17:00:00-03:00
-updatedAt: 2020-11-10T17:00:00-03:00
+title: Resolvendo o problema de CORS em aplicações Angular e Vue.js
+createdAt: 2017-09-18T00:00:00-03:00
+updatedAt: 2020-02-25T17:00:00-03:00
 author: giovane-souza
 tags:
   - front-end
