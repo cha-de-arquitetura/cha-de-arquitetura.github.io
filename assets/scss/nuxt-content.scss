@@ -39,9 +39,32 @@
   p,
   li,
   dt,
-  span:not([class*="hljs"]),
-  blockquote {
+  span:not([class*="hljs"]) {
     @apply text-white text-lg tracking-normal leading-8 font-normal;
+  }
+
+  p {
+    @apply mt-6;
+  }
+
+  blockquote {
+    @apply font-normal leading-3 border-l-2 border-ti-blue bg-gray-600 p-4 text-sm text-gray-200 my-4;
+
+    p {
+      @apply leading-3 text-sm text-gray-200 m-0;
+    }
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  em {
+    @apply italic;
+  }
+
+  small {
+    @apply text-sm;
   }
 
   code {
@@ -79,5 +102,18 @@
     td {
       @apply border border-ti-green text-white;
     }
+  }
+
+  ul {
+    @apply list-inside pl-6;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+  div.dot-separator {
+    letter-spacing: 22px;
+    @apply flex flex-row justify-around text-white py-2 text-3xl;
   }
 }
