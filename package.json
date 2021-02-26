@@ -20,7 +20,7 @@
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.0",
-    "highlight.js": "10.3.2",
+    "highlight.js": "10.6.0",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "6.15.4",
     "v-stylish": "2.0.0",
