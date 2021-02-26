@@ -29,7 +29,7 @@ export default {
   @apply align-middle self-center text-white font-light;
 
   &:first-child {
-    @apply mr-2 pr-2 border-r border-darker;
+    @apply mr-2 pr-2 border-r border-gray-600;
   }
 
   &.nuxt-link-exact-active {
