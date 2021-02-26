@@ -30,6 +30,11 @@
 <script>
 import { ResolveContentLocale } from '~/utils/locale';
 import { ArticleMetaTags } from '~/utils/head';
+import FacebookButton from '~/components/buttons/FacebookButton';
+import TwitterButton from '~/components/buttons/TwitterButton';
+import LinkedInButton from '~/components/buttons/LinkedInButton';
+import LinkButton from '~/components/buttons/LinkButton';
+import ShareButton from '~/components/buttons/ShareButton';
 
 export default {
   name: 'BlogIndex',
@@ -38,6 +43,13 @@ export default {
       en: '/articles/:slug',
       pt: '/artigos/:slug'
     }
+  },
+  components: {
+    FacebookButton,
+    TwitterButton,
+    LinkedInButton,
+    LinkButton,
+    ShareButton
   },
   async asyncData({ $content, params, app }) {
     const contentPath = `${ResolveContentLocale('articles', app.i18n)}/${params.slug}`;
