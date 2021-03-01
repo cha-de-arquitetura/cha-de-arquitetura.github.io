@@ -19,7 +19,7 @@
     "@nuxt/content": "^1.13.1",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.9.0",
+    "core-js": "^3.9.1",
     "highlight.js": "10.6.0",
     "nuxt": "^2.15.2",
     "nuxt-i18n": "6.20.3",
