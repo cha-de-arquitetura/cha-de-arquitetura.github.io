@@ -10,5 +10,5 @@ social:
     label: Franco Bereche
   github:
     url: https://github.com/fbereche
-    label: gigioSouza
+    label: fbereche
 ---
